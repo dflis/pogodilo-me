@@ -1,4 +1,8 @@
-This is your new Play application
-=====================================
+pogodilo-me
+===========
 
-This file will be packaged with your application, when using `play dist`.
+This is an exercise project in git, Scala, PlayFramework, Bootstrap, Google+ integration and Heroku.
+It implements a system for collecting football match outcome forecasts in order to generate and calculate a betting slip to a majority preference.
+Google plus integration will allow users to exercise their bragging rights, or to swear, curse or insult others on their bad forecast or overall score.
+Also the system will track groups betting account balance .. etc.
+Nothing special, so if you expected something extraordinary, move along :)
