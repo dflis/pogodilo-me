@@ -1,0 +1,208 @@
+/* Reset */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;}table{border-collapse:collapse;border-spacing:0;}fieldset,img{border:0;}address,caption,dfn,th,var{font-style:normal;font-weight:normal;}li{list-style:none;}caption,th{text-align:left;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+
+
+
+html,body{
+margin:0;
+padding:0;
+font-family: 'Lato', sans-serif;
+background: #fff url(../images/bg.jpg) center repeat;
+}
+
+
+#wrapper{
+width: 940px;
+margin: 0 auto;
+}
+
+.main{
+width: 940px;
+float: left;
+}
+
+.header, .content, .launch_main{
+width: 100%;
+float: left;
+margin-bottom: 30px;
+}
+
+
+div.logo{
+margin: 0 auto;
+text-align: center;
+background: url(../images/logo.png) center top no-repeat;
+font-family: 'Podkova', serif;
+width: 320px;
+margin-bottom: 15px;
+padding: 220px 0 0 0;
+margin-top: 100px;
+}
+
+
+h1{
+font-size: 30px;
+color: #030706;
+text-transform: lowercase;
+font-weight: bold;
+letter-spacing: 3px;
+
+}
+
+
+h2{
+text-align: center;
+font-family: 'Oxygen Mono', sans-serif;
+font-size: 10px;
+color: #030706;
+letter-spacing: 1px;
+font-weight: normal;
+text-transform: lowercase;
+
+}
+
+
+
+
+div.launch{
+width: 407px;
+height: 42px;
+margin: 0 auto;
+}
+
+
+ul.social_one
+{
+width: 90px;
+margin: 10px 0 0 0;
+float: left;
+height: 20px;
+}
+
+ul.social_one li{
+float: left;
+background: url(../images/social.png) left top no-repeat;
+position: relative;
+height: 25px;
+margin-right: 10px;
+}
+
+ul.social_one li a{
+display: block;
+width: 40px;
+height: 25px;
+}
+
+
+ul.social_one li.facebook{
+height: 25px;
+background-position: 0 0;
+width: 40px;
+}
+
+ul.social_one li.facebook:hover{
+background-position: 0 -25px;
+}
+
+
+
+ul.social_one li.twitter{
+height: 25px;
+margin-right: -10px;
+background-position: -40px 0;
+width: 40px;
+}
+
+ul.social_one li.twitter:hover{
+background-position: -40px -25px;
+}
+
+
+p.launching{
+float: left;
+font-family: Georgia;
+background: url(../images/launching_soon_bg.png) left top no-repeat;
+width: 193px;
+height: 42px;
+font-size: 21px;
+font-style: italic;
+text-align: center;
+margin: 0 17px 0 17px;
+color: #fff;
+line-height: 40px;
+}
+
+
+ul.social_two
+{
+width: 90px;
+margin: 10px 0 0 0;
+float: left;
+height: 20px;
+}
+
+ul.social_two li{
+float: left;
+background: url(../images/social.png) left top no-repeat;
+position: relative;
+height: 25px;
+margin-right: 10px;
+}
+
+ul.social_two li a{
+display: block;
+width: 40px;
+height: 25px;
+}
+
+
+ul.social_two li.youtube{
+height: 25px;
+background-position: -80px 0;
+width: 40px;
+}
+
+ul.social_two li.youtube:hover{
+background-position: -80px -25px;
+}
+
+
+
+ul.social_two li.instagram{
+height: 25px;
+margin-right: -10px;
+background-position: -120px 0;
+width: 40px;
+}
+
+ul.social_two li.instagram:hover{
+background-position: -120px -25px;
+}
+
+.content p{
+margin: 30px 0;
+text-align: center;
+color: #030706;
+font-weight: 700;
+font-size: 20px;
+}
+
+
+p.info{
+font-size: 18px;
+font-weight: 300;
+}
+
+p.info span{
+margin: 0 50px;
+}
+
+p.info a{
+color: #030706;
+text-decoration: none;
+}
+
+p.info a:hover{
+text-decoration: underline;
+}
