@@ -3,7 +3,7 @@
 /* ------------------------------- */
 
  body {
-    background-color: #f8f8f8;
+    background-color: #f8f8f8;    
 }
 
 /* Wrappers */
@@ -96,7 +96,7 @@
 
 /* Sidebar Menu Styles */
 
- .sidebar-search {
+.sidebar-search {
     padding: 15px;
 }
 

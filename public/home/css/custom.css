@@ -1,0 +1,13 @@
+body{
+    padding-top: 50px;
+}
+
+.logo{
+    width: 30px;
+}
+
+
+.sidebar-nav {
+    position: fixed;
+    width: 251px
+}
