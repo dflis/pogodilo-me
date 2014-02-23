@@ -1,0 +1,25 @@
+@* users Template File *@
+@(users: List[model.User])
+
+<table>
+  <tr>
+    <th>id</th>
+    <th>display_name</th>
+    <th>email</th>
+    <th>picture</th>
+    <th>google_id</th>
+    <th>role</th>
+  </tr>
+@for(u <- users) {
+  <tr>
+	<td>@u.id</td>
+	<td>@u.display_name</td>
+	<td>@u.email</td>
+	<td>@u.picture</td>
+	<td>@u.google_id</td>
+	<td>@u.role</td>
+  </tr>
+}    
+</table>
+
+
