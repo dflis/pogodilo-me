@@ -4,15 +4,14 @@ import play.api._
 import play.api.mvc._
 import play.api.db.slick._
 import play.api.db.slick.Config.driver.simple._
-import model._
+import model.Tables._
 import scala.slick.lifted.TableQuery
 
-object User extends Controller {
-  val users = TableQuery[Users]
+object Users extends Controller {
   def list = DBAction { implicit rs =>
     val query = for {
-      u <- users
+      u <- User
     } yield (u)
-    Ok(views.html.users(query.list))
+    Ok(views.html.users(query list))
   }
 }
