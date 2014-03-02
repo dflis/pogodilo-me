@@ -5,7 +5,6 @@ import play.api.mvc._
 import play.api.db.slick._
 import play.api.db.slick.Config.driver.simple._
 import model.Tables._
-import scala.slick.lifted.TableQuery
 
 object Users extends Controller {
   def list = DBAction { implicit rs =>
