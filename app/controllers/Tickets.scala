@@ -14,7 +14,18 @@ object Tickets extends Controller {
       										leftJoin Competitor on (_._2.home === _.id) 
       										leftJoin Competitor on (_._1._2.visitor === _.id))
     } yield (bt,m,(c1,c2))
+
+    val query2 = for {
+      btm <- BetTicketMatches
+      bt <- btm.betTicketFk
+      m <- btm.matchFk
+      c1 <- m.competitorFk1
+      c2 <- m.competitorFk2
+    } yield (bt,m,(c1,c2))
+    
+    val d = query.list diff query2.list
+    
     val result = query.list.groupBy(_._1).mapValues(x=>x.groupBy(_._2))
-    Ok(result.head.toString + "\n\n" + result.mkString("\n\n"))
+    Ok(result.head.toString + "\n\n" + result.mkString("\n\n") + "\n\n" + d.toString)
   }
 }
