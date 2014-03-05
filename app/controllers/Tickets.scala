@@ -25,7 +25,7 @@ object Tickets extends Controller {
     
     val d = query.list diff query2.list
     
-    val result = query.list.groupBy(_._1).mapValues(x=>x.groupBy(_._2))
+    val result = query.list.groupBy(_._1).mapValues(_ map (x => (x._2, x._3))).mapValues(_ groupBy (_._1)).mapValues(_.mapValues(_ map (_._2)))
     Ok(result.head.toString + "\n\n" + result.mkString("\n\n") + "\n\n" + d.toString)
   }
 }
