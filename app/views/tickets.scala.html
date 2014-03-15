@@ -1,0 +1,32 @@
+@* users Template File *@
+@(tickets: Map[model.Tables.BetTicketRow, Map[(model.Tables.BetTicketRow, model.Tables.MatchRow), List[(model.Tables.CompetitorRow, model.Tables.CompetitorRow)]]])
+
+@main("Tickets"){
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Listići</h3>
+        </div>
+        <div class="panel-body">
+            <table class="table table-condensed table-bordered">
+              <tr>
+                <th>Listić</th>
+                <th>Utakmica</th>
+                <th>Domaćin</th>
+                <th>Gost</th>
+              </tr>
+            @for(t <- tickets.toList.sortBy(_._1.id)) {
+                <tr>
+                    <td rowspan="@t._2.size">@t._1.displayName</td>
+                    @for(m <- t._2.toList.sortBy(_._1._2.scheduled.getTime)) {
+                        <td rowspan="@m._2.size">@m._1._2.displayName</td>
+                        @for(c <- m._2) {
+                            <td>@c._1.displayName</td>
+                            <td>@c._2.displayName</td>
+                            </tr>
+                        }
+                    }
+            }
+            </table>
+        </div>
+    </div>
+}
