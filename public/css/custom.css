@@ -1,5 +1,12 @@
 body{
-    padding-top: 50px;
+    padding-top: 50px;    
+    background-color: white;
+}
+
+@media (min-width: 768px) {
+    body{
+        background: url('../image/bg.png') repeat-y;
+    }
 }
 
 .logo{
@@ -14,6 +21,5 @@ body{
 @media (min-width: 768px) {
     .sidebar-nav{
         width: 250px;
-}
-
+    }
 }
