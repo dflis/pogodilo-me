@@ -17,12 +17,12 @@
             <!-- Core CSS - Include with every page -->
         <link href="/res/css/bootstrap.min.css" rel="stylesheet">
         <link href="/res/font-awesome/css/font-awesome.css" rel="stylesheet">
-        <link href="/res/css/custom.css" rel="stylesheet">
 
             <!-- Page-Level Plugin CSS - Blank -->
 
             <!-- SB Admin CSS - Include with every page -->
         <link href="/res/css/sb-admin.css" rel="stylesheet">
+        <link href="/res/css/custom.css" rel="stylesheet">
 
     </head>
 
@@ -89,8 +89,8 @@
             </nav>
                 <!-- /.navbar-static-top -->
 
-            <nav class="navbar-default sidebar-nav navbar-static-side" role="navigation">
-                <div class="sidebar-collapse collapse" style="width:100%">
+            <nav class="navbar-static-side navbar-default sidebar-nav navbar-fixed-top" role="navigation">
+                <div class="sidebar-collapse collapse">
                     <ul class="nav" id="side-menu">
 
                         <li>
@@ -132,9 +132,12 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    @content
+                    <h1 class="page-header">@title</h1>
                 </div>
                     <!-- /.col-lg-12 -->
+            </div>
+            <div class="row">
+                    @content
             </div>
                 <!-- /.row -->
         </div>
@@ -142,8 +145,8 @@
 
         <div class="navbar navbar-default navbar-fixed-bottom">
             <div class="container">
-                <p class="navbar-text pull-left"><a href="https://plus.google.com/u/0/communities/115499489117908981161" target="_blank"><i class="fa fa-google-plus-square"></i> Prona∆í√´i nas  na g+</a></p>
-                <p class="navbar-text pull-right">¬¨¬© syzygy 2014</p>
+                <p class="navbar-text pull-left"><a href="https://plus.google.com/u/0/communities/115499489117908981161" target="_blank"><i class="fa fa-google-plus-square"></i> Pronađi nas  na g+</a></p>
+                <p class="navbar-text pull-right">© syzygy 2014</p>
             </div>
         </div>
             <!-- /#wrapper -->
