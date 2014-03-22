@@ -6,3 +6,14 @@ body{
     width: 30px;
 }
 
+.sidebar-nav{
+    margin-top: 50px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .sidebar-nav{
+        width: 250px;
+}
+
+}
