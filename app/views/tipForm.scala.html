@@ -1,0 +1,10 @@
+@(tipForm: Form[UserTip])
+
+@main("Prognoza"){
+    @helper.form(action = routes.Tickets.list(1)) {
+        @helper.select(field = tipForm("user"), options = List("1" -> "Mile", "2" -> "Mekintoš"))
+        @helper.inputText(tipForm("tournament"))
+        @helper.inputText(tipForm("match"))
+        @helper.inputText(tipForm("tip"))
+    }
+}

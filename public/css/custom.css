@@ -18,6 +18,10 @@ body{
     width: 100%;
 }
 
+.footerFix {
+    height: 55px;
+}
+
 @media (min-width: 768px) {
     .sidebar-nav{
         width: 250px;
