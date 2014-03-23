@@ -1,195 +1,25 @@
 @* users Template File *@
-@(users: List[model.User])
+@(users: List[model.Tables.UserRow])
 
-<!DOCTYPE html>
-<html>
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Home - pogodilo.me</title>
-    
-    <!-- Page favicon -->
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
-
-    <!-- Core CSS - Include with every page -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-
-    <!-- Page-Level Plugin CSS - Blank -->
-
-    <!-- SB Admin CSS - Include with every page -->
-    <link href="css/sb-admin.css" rel="stylesheet">
-
-</head>
- 
-<body>
-
-    <div id="wrapper">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html"><img class="logo" src="image/logo.png"> pogodilo.me</a>
-            </div>
-            <!-- /.navbar-header -->        
-            
-            <div class="navbar-collapse navbar-ex1-collapse collapse">     
-                <ul class="nav navbar-top-links navbar-right">
-
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-trophy fa-fw"></i> LP 13/14 <i class="fa fa-caret-down"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#"><i class="fa fa-dot-circle-o fa-fw"></i> LP 13/14</a></li>
-                            <li class="disabled"><a href="#"><i class="fa fa-dot-circle-o fa-fw"></i> WC 13/14</a></li>                        
-                        </ul>
-                        <!-- /dropdown-tournament -->
-                    </li>                
-
-                    <li>
-                        <a>
-                            <i class="fa fa-money fa-fw"></i> +420 kn 
-                        </a>                    
-                        <!-- /saldo --> 
-                    </li>
-
-                    <li>
-                        <a>
-                            <i class="fa fa-list-ol fa-fw"></i> 4 / 14 
-                        </a>                    
-                        <!-- /ranking --> 
-                    </li>
-
-
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <i class="fa fa-user fa-fw"></i> Flis <i class="fa fa-caret-down"></i>
-                        </a>
-                        <ul class="dropdown-menu dropdown-user">
-                            <li><a href="#"><i class="fa fa-user fa-fw"></i>Profil</a></li>
-                            <li><a href="#"><i class="fa fa-gear fa-fw"></i>Postavke</a></li>
-                            <li class="divider"></li>
-                            <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Odjava</a></li>
-                        </ul>
-                        <!-- /.dropdown-user -->
-                    </li>                    
-                    <!-- /.dropdown -->
-                </ul>    
-                <!-- /.navbar-top-links -->
-            </div>
-        </nav>
-        <!-- /.navbar-static-top -->
-
-        <nav class="navbar-default sidebar-nav navbar-static-side" role="navigation">
-            <div class="sidebar-collapse collapse" style="width:100%">
-                <ul class="nav" id="side-menu">
-                    
-                    <li>
-                        <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Pregled</a>
-                    </li>
-                    
-                    <li>
-                        <a href="#"><i class="fa fa-table fa-fw"></i> Tablica</a>
-                    </li>
-                    
-                    <li>
-                        <a href="#"><i class="fa fa-credit-card fa-fw"></i> Listići</a>
-                    </li>
-                    
-                    <li>
-                        <a href="#"><i class="fa fa-dollar fa-fw"></i> Financije</a>
-                    </li>
-                    
-                    
-                    <li>
-                        <a href="#"><i class="fa fa-link fa-fw"></i> Korisni linkovi<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a href="https://www.supersport.hr/" target="_blank">SuperSport</a>
-                            </li>
-                            <li>
-                                <a href="http://www.stats.betradar.com/s4/?clientid=262#2_1,3_393,22_1,5_6359,9_overview" target="_blank">Bet Radar</a>
-                            </li>
-                        </ul>
-                        <!-- /.nav-second-level -->
-                    </li>
-                </ul>
-                <!-- /#side-menu -->
-            </div>
-            <!-- /.sidebar-collapse -->
-        </nav>
-        <!-- /.navbar-static-side -->
-    </div>
-    <div id="page-wrapper">
-        <div class="row">
-            <div class="col-lg-12">
-            	<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">Korisnici</h3>
-					</div>
-					<div class="panel-body">
-						<table class="table table-condensed">
-						  <tr>
-						    <th>id</th>
-						    <th>display_name</th>
-						    <th>email</th>
-						    <th>picture</th>
-						    <th>google_id</th>
-						    <th>role</th>
-						  </tr>
-						@for(u <- users) {
-						  <tr>
-							<td>@u.id</td>
-							<td>@u.display_name</td>
-							<td>@u.email</td>
-							<td>@u.picture</td>
-							<td>@u.google_id</td>
-							<td>@u.role.get.toUpperCase</td>
-						  </tr>
-						}    
-						</table>
-					</div>
-            	</div>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /#page-wrapper -->
-        
-    <div class="navbar navbar-default navbar-fixed-bottom">
-        <div class="container">
-            <p class="navbar-text pull-left"><a href="https://plus.google.com/u/0/communities/115499489117908981161" target="_blank"><i class="fa fa-google-plus-square"></i> Pronađi nas  na g+</a></p>
-            <p class="navbar-text pull-right">© syzygy 2014</p>
-        </div>        
-    </div>  
-    <!-- /#wrapper -->
-    
-    
-
-    <!-- Core Scripts - Include with every page -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
-
-    <!-- Page-Level Plugin Scripts - Blank -->
-
-    <!-- SB Admin Scripts - Include with every page -->
-    <script src="js/sb-admin.js"></script>
-
-    <!-- Page-Level Demo Scripts - Blank - Use for reference -->
-
-</body>
-
-</html>
-
+@main("Korisnici"){
+<table class="table table-condensed“">
+  <tr>
+    <th>id</th>
+    <th>display_name</th>
+    <th>email</th>
+    <th>picture</th>
+    <th>google_id</th>
+    <th>role</th>
+  </tr>
+@for(u <- users) {
+  <tr>
+    <td>@u.id</td>
+    <td>@u.displayName</td>
+    <td>@u.email</td>
+    <td>@u.picture</td>
+    <td>@u.googleId</td>
+    <td>@u.role</td>
+  </tr>
+}
+</table>
+}

@@ -4,9 +4,12 @@
 
 # Home page
 
-GET		/user							controllers.User.list
+GET         /user                                   controllers.Users.list
+GET         /tournament/:tournamentId/ticket        controllers.Tickets.list(tournamentId: Int)
+GET         /tip                                    controllers.Tickets.tip
 
 # Map static resources from the /public folder to the /assets URL path
 #GET     /assets/*file               controllers.Assets.at(path="/public", file)
-GET     /*file                     		controllers.Assets.at(path="/public", file)
-GET 	/  								controllers.Assets.at(path="/public/intro", file="index.html")
+GET         /res/*file                              controllers.Assets.at(path="/public", file)
+GET         /*file                                  controllers.Assets.at(path="/public", file)
+GET         /                                       controllers.Assets.at(path="/public/intro", file="index.html")
